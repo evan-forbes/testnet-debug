@@ -4,9 +4,9 @@
 # keeps running it validating blocks.
 
 # check if environment variables are set
-if [[ -z "${CELESTIA_HOME}" || -z "${MONIKER}" || -z "${ETH_ADDRESS}" || -z "${AMOUNT}" ]]
+if [[ -z "${CELESTIA_HOME}" || -z "${MONIKER}" || -z "${AMOUNT}" ]]
 then
-  echo "Environment not setup correctly. Please set: CELESTIA_HOME, MONIKER, ETH_ADDRESS, AMOUNT variables"
+  echo "Environment not setup correctly. Please set: CELESTIA_HOME, MONIKER, AMOUNT variables"
   exit -1
 fi
 
