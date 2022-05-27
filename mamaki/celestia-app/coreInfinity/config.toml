@@ -225,7 +225,7 @@ pprof-laddr = "localhost:6060"
 [p2p]
 
 # Enable the legacy p2p layer.
-use-legacy = false
+use-legacy = true
 
 # Select the p2p internal queue
 queue-type = "priority"
