@@ -3,10 +3,12 @@ version: '3'
 services:
   core0:
     container_name: core0
-    image: ghcr.io/celestiaorg/celestia-app:latest
+    image: celestiaorg/celestia-app
     ports:
       - "9090:9090"
       - "26657:26657"
+    cap_add:
+      - NET_ADMIN
     command: [
       "start",
       "--moniker", "core0",
@@ -21,9 +23,11 @@ services:
 
   core1:
     container_name: core1
-    image: ghcr.io/celestiaorg/celestia-app:latest
+    image: celestiaorg/celestia-app
     depends_on:
       - core0
+    cap_add:
+      - NET_ADMIN
     environment:
       - MONIKER=core1
       - CELESTIA_HOME=/opt
@@ -45,9 +49,11 @@ services:
 
   core2:
     container_name: core2
-    image: ghcr.io/celestiaorg/celestia-app:latest
+    image: celestiaorg/celestia-app
     depends_on:
       - core0
+    cap_add:
+      - NET_ADMIN
     environment:
       - MONIKER=core2
       - CELESTIA_HOME=/opt
@@ -68,9 +74,11 @@ services:
 
   core3:
     container_name: core3
-    image: ghcr.io/celestiaorg/celestia-app:latest
+    image: celestiaorg/celestia-app
     depends_on:
       - core0
+    cap_add:
+      - NET_ADMIN
     environment:
       - MONIKER=core3
       - CELESTIA_HOME=/opt

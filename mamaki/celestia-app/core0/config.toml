@@ -270,16 +270,16 @@ addr-book-strict = true
 #
 # TODO: Remove once p2p refactor is complete in favor of MaxConnections.
 # ref: https://github.com/tendermint/tendermint/issues/5670
-max-num-inbound-peers = 40
+max-num-inbound-peers = 3
 
 # Maximum number of outbound peers to connect to, excluding persistent peers
 #
 # TODO: Remove once p2p refactor is complete in favor of MaxConnections.
 # ref: https://github.com/tendermint/tendermint/issues/5670
-max-num-outbound-peers = 10
+max-num-outbound-peers = 2
 
 # Maximum number of connections (inbound and outbound).
-max-connections = 64
+max-connections = 5
 
 # Rate limits the number of incoming connection attempts per IP address.
 max-incoming-connection-attempts = 100
@@ -449,7 +449,7 @@ version = "v0"
 wal-file = "data/cs.wal/wal"
 
 # How long we wait for a proposal block before prevoting nil
-timeout-propose = "3s"
+timeout-propose = "2s"
 # How much timeout-propose increases with each round
 timeout-propose-delta = "500ms"
 # How long we wait after receiving +2/3 prevotes for “anything” (ie. not a single block or nil)
